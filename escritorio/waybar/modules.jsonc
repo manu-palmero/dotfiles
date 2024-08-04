@@ -1,0 +1,83 @@
+{
+    "hyprland/workspaces": {
+		"all-outputs": true,
+        "on-click": "activate",
+        "active-only": false,
+        "format": "{icon}",
+        "format-icons": {
+            "urgent": "",
+            "active": "",
+            "default": ""
+        },
+        "persistent-workspaces": {
+            "*": 5
+        }
+	},
+
+	"clock": {
+		"format": "{:%d/%m/%Y %H:%M}",
+		"tooltip-format": "<tt><small>{calendar}</small></tt>",
+		"timezone": "America/Argentina/Mendoza",
+        "calendar": {
+                    "mode"          : "year",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-click-forward": "tz_up",
+                    "on-click-backward": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
+	},
+
+	// AUDIO
+	"wireplumber": {
+		"format": "{volume}% {icon}",
+		"format-icons": ["", "", ""],
+		"on-click": "pavucontrol",
+		"format-muted": "Silencio"
+	},
+	"jack": {
+		"format": "JACK: {load}%"
+	},
+
+	"network": {
+		"interface": "wlan0",
+		"format-wifi": "{icon} {ifname}: {essid} ({signalStrength}%)",
+		"format-ethernet": "Ethernet",
+		"format-linked": "Conectado, sin IP",
+		"format-disconnected": "Desconectado"
+	},
+
+	// HARDWARE
+	"cpu": {
+		"format": "C: {load} - {usage}% / ",
+		"interval": 2
+	},
+	"disk": {
+		"format": "D: {used} GiB ({percentage_used}%) / ",
+		"unit": "GiB"
+	},
+	"memory": {
+		"format": "M: {used} GiB ({percentage}%) S: {swapUsed} GiB ({swapPercentage}%)",
+		"interval": 2
+	},
+	
+	
+
+	"tray": {
+		"icon-size": 20,
+		"spacing": 20
+	}
+	
+}

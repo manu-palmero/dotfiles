@@ -1,0 +1,8 @@
+XF86AudioRaiseVolume
+    pamixer --increase 5
+
+XF86AudioLowerVolume
+    pamixer --decrease 5
+
+XF86AudioMute
+    pamixer --toggle-mute 

@@ -13,13 +13,13 @@ for funcs in "$PUNTOS/terminal/funciones/"*; do
     fi
 done
 
-if [ ! $dir = "$HOME/.dotfiles/setup.sh" ]; then
-    echo "El directorio actual es $dir, se creará un nuevo directorio $HOME/.dotfiles/ y se copiarán los archivos necesarios."
+if [ ! $dir = "$HOME/dotfiles/setup.sh" ]; then
+    echo "El directorio actual es $dir, se creará un nuevo directorio $HOME/dotfiles/ y se copiarán los archivos necesarios."
     echo "Por favor, ejecuta este archivo desde esa ubicación."
     read -n 1 -s -r -p "Presiona cualquier tecla para continuar..."
-    rm -rf $HOME/.dotfiles/ > /dev/null
-    mkdir -p $HOME/.dotfiles/
-    cp -r * $HOME/.dotfiles/
+    rm -rf $HOME/dotfiles/ > /dev/null
+    mkdir -p $HOME/dotfiles/
+    cp -r * $HOME/dotfiles/
     exit 1
 fi
 

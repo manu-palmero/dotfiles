@@ -50,7 +50,7 @@ siono() {
     if [ -z "$respuesta" ]; then
         respuesta="$default"
     fi
-
+    #TODO Añadir if para comprobar si "s" es "default" antes de procesar la respuesta, ya que si fuera "no" por "default" eje resultado sería el contrario.
     if [[ $respuesta =~ ^[Ss]$ || $respuesta = " " ]]; then
         echo ""
         return 0

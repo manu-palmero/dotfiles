@@ -1,0 +1,38 @@
+{
+	"layer": "top",
+	"position": "top",
+	"height": 16,
+	"margin-top": 14,
+	"margin-bottom": 0,
+	"margin-left": 0,
+	"margin-right": 0,
+
+	"include": [
+		"~/dotfiles/escritorio/waybar/modules.jsonc"
+	],
+
+	"modules-left": [
+		"hyprland/workspaces", 
+		"hyprland/window", 
+		"layout"],
+		
+	"modules-center": [
+		"clock"
+	],
+	"modules-right": [
+		"wireplumber", 
+		"jack", 
+		"network", 
+		"group/hardware",
+		"tray"
+	],
+
+	"group/hardware": {
+		"orientation": "horizontal",
+		"modules": [
+			"cpu",
+			"disk",
+			"memory"
+		]
+	}
+}
