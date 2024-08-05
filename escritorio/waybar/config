@@ -2,10 +2,10 @@
 	"layer": "top",
 	"position": "top",
 	"height": 16,
-	"margin-top": 14,
+	"margin-top": 10,
 	"margin-bottom": 0,
-	"margin-left": 0,
-	"margin-right": 0,
+	"margin-left": 10,
+	"margin-right": 10,
 
 	"include": [
 		"~/dotfiles/escritorio/waybar/modules.jsonc"
@@ -24,15 +24,8 @@
 		"jack", 
 		"network", 
 		"group/hardware",
-		"tray"
-	],
+		"tray",
+		"custom/exit"
+	]
 
-	"group/hardware": {
-		"orientation": "horizontal",
-		"modules": [
-			"cpu",
-			"disk",
-			"memory"
-		]
-	}
 }

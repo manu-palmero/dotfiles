@@ -33,11 +33,21 @@
                     },
         "actions":  {
                     "on-click-right": "mode",
-                    "on-click-forward": "tz_up",
-                    "on-click-backward": "tz_down",
+                    // "on-click-forward": "tz_up",
+                    // "on-click-backward": "tz_down",
                     "on-scroll-up": "shift_up",
                     "on-scroll-down": "shift_down"
                     }
+	},
+
+	// HARDWARE
+	"group/hardware": {
+		"orientation": "horizontal",
+		"modules": [
+			"cpu",
+			"disk",
+			"memory"
+		]
 	},
 
 	// AUDIO
@@ -52,8 +62,9 @@
 	},
 
 	"network": {
-		"interface": "wlan0",
-		"format-wifi": "{icon} {ifname}: {essid} ({signalStrength}%)",
+		// "interface": "wlan0",
+		"format-wifi": "󰤨", 
+		"tooltip-format-wifi": "{ifname}: {essid} ({signalStrength}%)",
 		"format-ethernet": "Ethernet",
 		"format-linked": "Conectado, sin IP",
 		"format-disconnected": "Desconectado"
@@ -61,22 +72,26 @@
 
 	// HARDWARE
 	"cpu": {
-		"format": "C: {load} - {usage}% / ",
+		"format": " {load} - {usage}%",
 		"interval": 2
 	},
 	"disk": {
-		"format": "D: {used} GiB ({percentage_used}%) / ",
+		"format": " {used} GiB ({percentage_used}%)",
 		"unit": "GiB"
 	},
 	"memory": {
-		"format": "M: {used} GiB ({percentage}%) S: {swapUsed} GiB ({swapPercentage}%)",
+		"format": "󰍛 {used} GiB ({percentage}%) S: {swapUsed} GiB ({swapPercentage}%)",
 		"interval": 2
 	},
 	
-	
+	"custom/exit": {
+		"format": "⏻",
+		"on-click": "wlogout",
+		"tooltip-format": "Menú de apagado"
+	},
 
 	"tray": {
-		"icon-size": 20,
+		"icon-size": 14,
 		"spacing": 20
 	}
 	

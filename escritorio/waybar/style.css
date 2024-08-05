@@ -7,9 +7,10 @@ priInverse: #904b40;
 */
 
 * {
-    font-family: "Hack Nerd Font";
+    font-family: JetBrainsMono;
     border: none;
     border-radius: 0px;
+    font-size: 13px;
 }
 window#waybar {
     background-color: transparent;
@@ -24,9 +25,9 @@ window#waybar {
 #window {
     background: #561e17;
     border-radius: 15px;
-    margin: 2px 5px 2px 5px;
+    margin: 0px 5px 0px 0px;
     padding: 2px 10px 2px 10px;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 /* 
@@ -34,7 +35,7 @@ window#waybar {
 */
 #workspaces {
     background: #561e17;
-    margin: 0px 15px 0px 15px;
+    margin: 0px 5px 0px 0px;
     padding: 0px 1px;
     border-radius: 15px;
     border: 0px;
@@ -76,7 +77,50 @@ tooltip {
     opacity: 0.9;
     padding: 20px;
 }
-
 tooltip label {
     color: #ffb4a8;
+}
+
+#disk,#memory,#cpu {
+    background: #561e17;
+    border-radius: 15px;
+    padding: 2px 10px 2px 10px;
+    color: #ffb4a8;
+    margin: 0px 0px 0px 5px;
+}
+
+#custom-exit {
+    background-color: #561e17;
+    color: #ffb4a8;
+    border-radius: 15px;
+    min-width: 35px;
+    font-size: 20px;
+    border: solid 1px #ffb4a8;
+}
+
+#tray {
+    background: #561e17;
+    color: #ffb4a8;
+    border-radius: 15px;
+    padding: 2px 2px;
+    min-width: 40px;
+    margin: 0px 5px 0px 5px;
+}
+
+#network {
+    background: #561e17;
+    color:#ffb4a8;
+    border-radius: 15px;
+    padding: 2px 2px;
+}
+#network.wifi {
+    font-size: large;
+    min-width: 30px;
+}
+
+#clock {
+    background: #561e17;
+    /* color: #ffb4a8; */
+    border-radius: 15px;
+    padding: 2px 2px;
 }
