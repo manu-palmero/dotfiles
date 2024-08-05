@@ -13,8 +13,8 @@
 
 	"modules-left": [
 		"hyprland/workspaces", 
-		"hyprland/window", 
-		"layout"],
+		"hyprland/window"
+	],
 		
 	"modules-center": [
 		"clock"
