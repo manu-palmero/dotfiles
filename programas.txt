@@ -2,3 +2,4 @@ fastfetch
 eza
 curl
 libxkbcommon
+rofi-wayland
