@@ -7,13 +7,29 @@ IFS=$'\n'
 dir="$(readlink -f "$0")"
 programasNoInstalados=()
 
+echo "Ejecutando el instalador desde $dir"
+
+# Leer la información del chasis
+CHASSIS_TYPE=$(cat /sys/class/dmi/id/chassis_type 2>/dev/null)
+PRODUCT_NAME=$(cat /sys/class/dmi/id/product_name 2>/dev/null)
+
+# Determinar si es un portátil o un sobremesa
+if [[ "$CHASSIS_TYPE" == "9" || "$CHASSIS_TYPE" == "10" || "$CHASSIS_TYPE" == "14" ]]; then
+    echo "Este es un portátil."
+elif [[ "$PRODUCT_NAME" =~ "Laptop" || "$PRODUCT_NAME" =~ "Portable" ]]; then
+    echo "Este es un portátil."
+else
+    echo "Este es un ordenador de sobremesa."
+fi
+
+# Importar funciones
 for funcs in "$PUNTOS/terminal/funciones/"*; do
     if [ -f "$funcs" ]; then
         . "$funcs"
     fi
 done
 
-if [ ! $dir = "$HOME/dotfiles/setup.sh" ]; then
+if [ ! $dir = "$HOME/dotfiles/instalador/setup.sh" ]; then
     echo "El directorio actual es $dir, se creará un nuevo directorio $HOME/dotfiles/ y se copiarán los archivos necesarios."
     echo "Por favor, ejecuta este archivo desde esa ubicación."
     read -n 1 -s -r -p "Presiona cualquier tecla para continuar..."
