@@ -63,7 +63,7 @@
 
 	"network": {
 		// "interface": "wlan0",
-		"format-wifi": "󰤨", 
+		"format-wifi": " 󰤨 {bandwidthDownBytes}", 
 		"tooltip-format-wifi": "{ifname}: {essid} ({signalStrength}%)",
 		"format-ethernet": "Ethernet",
 		"format-linked": "Conectado, sin IP",
