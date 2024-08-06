@@ -62,8 +62,16 @@
 	},
 
 	"network": {
-		// "interface": "wlan0",
-		"format-wifi": " 󰤨 {bandwidthDownBytes}", 
+		"interval": 2,
+		"format-icons": {
+			"wifi": [
+			"󰤟",
+			"󰤢",
+			"󰤥",
+			"󰤨"
+			]
+		},
+		"format-wifi": " {icon} {bandwidthDownBytes}", 
 		"tooltip-format-wifi": "{ifname}: {essid} ({signalStrength}%)",
 		"format-ethernet": "Ethernet",
 		"format-linked": "Conectado, sin IP",
@@ -92,7 +100,7 @@
 
 	"tray": {
 		"icon-size": 14,
-		"spacing": 20
+		"spacing": 10
 	}
 	
 }
