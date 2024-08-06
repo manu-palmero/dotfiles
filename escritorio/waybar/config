@@ -21,7 +21,7 @@
 	],
 	"modules-right": [
 		"wireplumber", 
-		"jack", 
+		// "jack", 
 		"network", 
 		"group/hardware",
 		"tray",
