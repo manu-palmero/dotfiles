@@ -1,0 +1,106 @@
+{
+    "hyprland/workspaces": {
+		"all-outputs": true,
+        "on-click": "activate",
+        "active-only": false,
+        "format": "{icon}",
+        "format-icons": {
+            "urgent": "",
+            "active": "",
+            "default": ""
+        },
+        "persistent-workspaces": {
+            "*": 5
+        }
+	},
+
+	"clock": {
+		"format": "{:%d/%m/%Y %H:%M}",
+		"tooltip-format": "<tt><small>{calendar}</small></tt>",
+		"timezone": "America/Argentina/Mendoza",
+        "calendar": {
+                    "mode"          : "year",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    // "on-click-forward": "tz_up",
+                    // "on-click-backward": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
+	},
+
+	// HARDWARE
+	"group/hardware": {
+		"orientation": "horizontal",
+		"modules": [
+			"cpu",
+			"disk",
+			"memory"
+		]
+	},
+
+	// AUDIO
+	"wireplumber": {
+		"format": "{volume}% {icon}",
+		"format-icons": ["", "", ""],
+		"on-click": "pavucontrol",
+		"format-muted": "Silencio"
+	},
+	"jack": {
+		"format": "JACK: {load}%"
+	},
+
+	"network": {
+		"interval": 2,
+		"format-icons": {
+			"wifi": [
+			"󰤟",
+			"󰤢",
+			"󰤥",
+			"󰤨"
+			]
+		},
+		"format-wifi": " {icon} {bandwidthDownBytes}", 
+		"tooltip-format-wifi": "{ifname}: {essid} ({signalStrength}%)",
+		"format-ethernet": "Ethernet",
+		"format-linked": "Conectado, sin IP",
+		"format-disconnected": "Desconectado"
+	},
+
+	// HARDWARE
+	"cpu": {
+		"format": "  {load} - {usage}%",
+		"interval": 2
+	},
+	"disk": {
+		"format": " {used} GiB ({percentage_used}%)",
+		"unit": "GiB"
+	},
+	"memory": {
+		"format": "󰍛 {used} GiB ({percentage}%)",
+		"interval": 2
+	},
+	
+	"custom/exit": {
+		"format": "⏻",
+		"on-click": "wlogout",
+		"tooltip-format": "Menú de apagado"
+	},
+
+	"tray": {
+		"icon-size": 14,
+		"spacing": 10
+	}
+	
+}

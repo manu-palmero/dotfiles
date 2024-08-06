@@ -1,0 +1,31 @@
+{
+	"layer": "top",
+	"position": "top",
+	"height": 16,
+	"margin-top": 10,
+	"margin-bottom": 0,
+	"margin-left": 10,
+	"margin-right": 10,
+
+	"include": [
+		"~/dotfiles/escritorio/waybar/modules.jsonc"
+	],
+
+	"modules-left": [
+		"hyprland/workspaces", 
+		"hyprland/window"
+	],
+		
+	"modules-center": [
+		"clock"
+	],
+	"modules-right": [
+		"wireplumber", 
+		"jack", 
+		"network", 
+		"group/hardware",
+		"tray",
+		"custom/exit"
+	]
+
+}
