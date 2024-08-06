@@ -72,7 +72,7 @@
 
 	// HARDWARE
 	"cpu": {
-		"format": " {load} - {usage}%",
+		"format": "  {load} - {usage}%",
 		"interval": 2
 	},
 	"disk": {
@@ -80,7 +80,7 @@
 		"unit": "GiB"
 	},
 	"memory": {
-		"format": "󰍛 {used} GiB ({percentage}%) S: {swapUsed} GiB ({swapPercentage}%)",
+		"format": "󰍛 {used} GiB ({percentage}%)",
 		"interval": 2
 	},
 	
