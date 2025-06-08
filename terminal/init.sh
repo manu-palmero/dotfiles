@@ -18,3 +18,10 @@ for funcs in "$PUNTOS/terminal/funciones/"*; do
         . "$funcs"
     fi
 done
+
+# Entorno
+for envvs in "$PUNTOS/terminal/exports/"*; do
+    if [ -f "$envvs" ]; then
+        . "$envvs"
+    fi
+done

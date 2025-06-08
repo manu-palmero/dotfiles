@@ -80,10 +80,7 @@
 
 	// HARDWARE
 	"cpu": {
-		"format": "{icon}  {load} - {usage}%",
-		"format-icons":[
-			""
-		],
+		"format": "  {load} - {usage}%",
 		"interval": 2
 	},
 	"disk": {
@@ -91,10 +88,7 @@
 		"unit": "GiB"
 	},
 	"memory": {
-		"format": "{icon} {used} GiB",
-		"format-icons":[
-			""
-		],
+		"format": " {used} GiB",
 		"interval": 2
 	},
 	

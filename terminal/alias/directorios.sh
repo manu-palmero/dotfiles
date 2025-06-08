@@ -1,7 +1,7 @@
 # Comandos para directorios
-# alias ls='exa -F -AhMO --git --git-repos'
-alias ls='exa -F -AlhMO --git --git-repos'
-alias lt='exa -F -AlMO --git --git-repos -T -L' # Uso: lt [num] | ejemplo: lt 1 lt 2 
+
+alias ls='exa -F -alhmg --git'
+alias lt='exa -F -almg --git -T -L' # Uso: lt [num] | ejemplo: lt 1 lt 2 
 
 alias dir='dir --color=auto'
 
@@ -12,4 +12,4 @@ alias fgrep='grep -F --color=auto'
 alias egrep='grep -E --color=auto'
 
 # Saltos a directorios
-alias dotfiles='cd ~/.dotfiles'
+alias dotfiles='cd ~/dotfiles'
