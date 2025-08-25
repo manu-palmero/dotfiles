@@ -74,3 +74,4 @@ fastfetch
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/home/manu/.lmstudio/bin"
 eval "$(zoxide init bash)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
