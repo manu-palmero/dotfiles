@@ -3,6 +3,9 @@ alias python='python3'
 alias pip='python3 -m pip'
 alias ffmpeg='ffmpeg -hide_banner'
 
+# Cuando el comando exa no esté disponible
+alias exa="eza"
+
 alias prepcam="sudo modprobe v4l2loopback exclusive_caps=1 max_buffers=2 devices=1 && pkill gphoto"
 
 alias dslrcamraw="gphoto2 --stdout --capture-movie | ffmpeg -i - -s 640x480 -b:v 1k -c:v rawvideo -pix_fmt yuv420p -threads 1 -f v4l2 /dev/video0"
