@@ -28,23 +28,35 @@ shopt -s globstar
 force_color_prompt=yes
 color_prompt=yes
 
+# Git prompt (similar al segmento VCS del prompt de fish)
+if [ -f /usr/share/git/completion/git-prompt.sh ]; then
+  . /usr/share/git/completion/git-prompt.sh
+  export GIT_PS1_SHOWDIRTYSTATE=1
+  export GIT_PS1_SHOWUNTRACKEDFILES=1
+  export GIT_PS1_SHOWCOLORHINTS=1
+  export GIT_PS1_STATESEPARATOR='⚡'
+fi
+
 if [ "$color_prompt" = yes ]; then
 
     prompt_color='\[\033[;32m\]'
     info_color='\[\033[1;34m\]'
     prompt_symbol=@
+    arrow='➤'
     if [ "$EUID" -eq 0 ]; then # Change prompt colors for root user
         prompt_color='\[\033[;94m\]'
         info_color='\[\033[1;31m\]'
-        # Skull emoji for root terminal
         prompt_symbol=💀
+        arrow='⚡'
     fi
 
-    PS1=$prompt_color'┌──${debian_chroot:+($debian_chroot)──}${VIRTUAL_ENV:+(\[\033[0;1m\]$(basename $VIRTUAL_ENV)'$prompt_color')}['$info_color'\u'$prompt_color']'$info_color' '$prompt_symbol' '$prompt_color'['$info_color'\h'$prompt_color']─[\[\033[0;1m\]\w'$prompt_color']\n'$prompt_color'└───'$info_color'\$\[\033[0m\] '
+    # Prompt ultra-modernizado con Git, virtualenv y símbolos visuales
+    PS1=$prompt_color'┌──${debian_chroot:+($debian_chroot)──}${VIRTUAL_ENV:+(\[\033[0;1m\]$(basename $VIRTUAL_ENV)'$prompt_color')}['$info_color'\u'$prompt_color']'$info_color' '$prompt_symbol' '$prompt_color'['$info_color'\h'$prompt_color']─[\[\033[0;1m\]\w'$prompt_color']$(__git_ps1 "|%s")\n'$prompt_color'└─'$info_color$arrow'\[\033[0m\] '
 
     unset prompt_color
     unset info_color
     unset prompt_symbol
+    unset arrow
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi

@@ -1,7 +1,8 @@
 dirs=(
+    "~/.local/bin"
+    "~/bin"
     "~/Applications/odin"
     "~/.local/share/yabridge"
-    "~/.local/bin"
 )
 
 # echo "${dirs[*]}"
