@@ -70,4 +70,7 @@ end
 function fish_greeting
 end
 
+# zoxide init para fish
 zoxide init --cmd=cd fish | source
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

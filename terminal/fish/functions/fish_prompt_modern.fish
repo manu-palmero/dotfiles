@@ -14,7 +14,7 @@ function fish_prompt_modern --description 'Prompt modernizado inspirado en bash 
         set prompt_symbol '💀'
     end
     
-    # Línea superior: ┌──[usuario] @ [hostname]─[directorio]|git
+    # Línea superior: ┌──[usuario] @ [hostname] ─ [directorio]|git
     echo -n $prompt_color'┌──'
     
     # debian_chroot (si existe)
@@ -29,7 +29,7 @@ function fish_prompt_modern --description 'Prompt modernizado inspirado en bash 
     
     # [usuario] @ [hostname]
     echo -n '['$info_color(whoami)$prompt_color']'$info_color' '$prompt_symbol' '$prompt_color
-    echo -n '['$info_color(prompt_hostname)$prompt_color']─'
+    echo -n '['$info_color(prompt_hostname)$prompt_color'] ─ '
     
     # [directorio actual]
     echo -n '['(set_color --bold)(prompt_pwd)$prompt_color']'
@@ -47,44 +47,24 @@ function fish_prompt_modern --description 'Prompt modernizado inspirado en bash 
     or set -g __fish_git_prompt_showcolorhints 1
     
     # Símbolos usando Nerd Fonts con descripciones
-    # set -q __fish_git_prompt_char_stateseparator
-    # or set -g __fish_git_prompt_char_stateseparator ' '
-    # set -q __fish_git_prompt_char_cleanstate
-    # or set -g __fish_git_prompt_char_cleanstate ' ✓ limpio '
-    # set -q __fish_git_prompt_char_dirtystate
-    # or set -g __fish_git_prompt_char_dirtystate ' ✗ modificado '
-    # set -q __fish_git_prompt_char_stagedstate
-    # or set -g __fish_git_prompt_char_stagedstate ' ● preparado '
-    # set -q __fish_git_prompt_char_untrackedfiles
-    # or set -g __fish_git_prompt_char_untrackedfiles ' … sin seguimiento '
-    # set -q __fish_git_prompt_char_stashstate
-    # or set -g __fish_git_prompt_char_stashstate ' ⚑ guardado '
-    # set -q __fish_git_prompt_char_upstream_ahead
-    # or set -g __fish_git_prompt_char_upstream_ahead ' ↑ adelantado '
-    # set -q __fish_git_prompt_char_upstream_behind
-    # or set -g __fish_git_prompt_char_upstream_behind ' ↓ atrasado '
-    # set -q __fish_git_prompt_char_upstream_diverged
-    # or set -g __fish_git_prompt_char_upstream_diverged ' ⇅ divergido '
-
-        # Símbolos usando Nerd Fonts con descripciones detalladas
     set -q __fish_git_prompt_char_stateseparator
     or set -g __fish_git_prompt_char_stateseparator ' '
     set -q __fish_git_prompt_char_cleanstate
-    or set -g __fish_git_prompt_char_cleanstate ' ✓ árbol de trabajo limpio '
+    or set -g __fish_git_prompt_char_cleanstate ' ✓ limpio '
     set -q __fish_git_prompt_char_dirtystate
-    or set -g __fish_git_prompt_char_dirtystate ' ✗ cambios sin confirmar '
+    or set -g __fish_git_prompt_char_dirtystate ' ✗ modificado '
     set -q __fish_git_prompt_char_stagedstate
-    or set -g __fish_git_prompt_char_stagedstate ' ● cambios listos para commit '
+    or set -g __fish_git_prompt_char_stagedstate ' ● preparado '
     set -q __fish_git_prompt_char_untrackedfiles
-    or set -g __fish_git_prompt_char_untrackedfiles ' archivos sin rastrear '
+    or set -g __fish_git_prompt_char_untrackedfiles ' … sin seguimiento '
     set -q __fish_git_prompt_char_stashstate
-    or set -g __fish_git_prompt_char_stashstate ' ⚑ cambios guardados en stash '
+    or set -g __fish_git_prompt_char_stashstate ' ⚑ guardado '
     set -q __fish_git_prompt_char_upstream_ahead
-    or set -g __fish_git_prompt_char_upstream_ahead ' ↑ commits por enviar '
+    or set -g __fish_git_prompt_char_upstream_ahead ' ↑ adelantado '
     set -q __fish_git_prompt_char_upstream_behind
-    or set -g __fish_git_prompt_char_upstream_behind ' ↓ commits por recibir '
+    or set -g __fish_git_prompt_char_upstream_behind ' ↓ atrasado '
     set -q __fish_git_prompt_char_upstream_diverged
-    or set -g __fish_git_prompt_char_upstream_diverged ' ⇅ ramas divergentes '
+    or set -g __fish_git_prompt_char_upstream_diverged ' ⇅ divergido '
 
     fish_vcs_prompt ' | %s'
     
